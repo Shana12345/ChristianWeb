@@ -1,0 +1,122 @@
+
+body{
+background-color:#f4f4f4;
+color:#555555;
+
+font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight:400;
+  margin:0;
+}
+
+header {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-transform:uppercase;
+  letter-spacing: 0.2em
+}
+
+
+.ImageBorder
+{ background:orangered;
+    padding:5px;
+    margin-bottom:15px;
+    border:10px; 
+    border-radius:15px
+    
+}
+
+.container {
+  margin: auto;
+  width:70%;
+}
+
+
+.box-1{
+ background-color:#333;
+ color:#fff;
+ border: 5px red solid;
+ border-radius:15px;
+ height: 310px;
+ 
+
+
+ position:relative;/*ie needs this to show float */
+ width:27%;
+ float:right;
+ margin-right:-32%;/*must be same as width */
+ margin-left:10px;
+
+ margin-top:-9px;
+
+ padding: 1px;
+ margin:5px 0;
+}
+
+.box-1 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+text-transform:lowercase;
+}
+
+
+.box-2{
+background-color:orangered;
+color:#fff;
+border: 5px #333 solid;
+border-radius:15px;
+height: 260px;
+width: 700px;
+
+
+padding: 10px;
+margin-top:10px;
+margin:10px 0;
+}
+
+
+.box-2 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+
+}
+
+.box-2 h3{
+font-family:Tahoma;
+text-decoration: bold;
+}
+
+.box-3{
+background-color:red;
+color:#fff;
+border: 5px #333 solid;
+border-radius:15px;
+height: 320px;
+width: 700px;
+
+
+padding: 10px;
+margin-top:10px;
+margin:10px 0;
+}
+
+.box-3 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+}
+
+.box-3 h3{
+font-family:Tahoma;
+text-decoration: bold;
+}
+
+
+
