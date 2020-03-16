@@ -2,19 +2,29 @@ from flask import Flask, render_template, request, url_for, redirect, flash
 from flask_mysqldb import MySQL
 import os
 
+
 app = Flask(__name__) #assign your name 'app'
-app.secret_key = "flash message"
 app.config["MYSQL_HOST"] = os.environ['MYSQL'] #IP address of SQL database 
 app.config["MYSQL_USER"] = os.environ['MYSQLUSER']#Username for DB
 app.config["MYSQL_PASSWORD"] = os.environ['MYSQLPASSWORD']#Password for DB
 app.config["MYSQL_DB"] = os.environ['MYSQLDB'] #Databse being used
+app.config['SECRET_KEY'] = 'secret'
 
 mysql = MySQL(app) # What to define 'MySQL' as 'mysql'
 
-
 @app.route('/')
 def Main():
-    return render_template('Home.html', title='Light')
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT c.NICK_NAME, c.QUOTE, a.AUTHOR, a.AUTHOR_QUOTE FROM CUSTOMER_QUOTE c INNER JOIN AUTHOR a ON (c.FAVORITE_AUTHOR=a.AID)")
+    mysql.connection.commit()
+    rows = cur.fetchall()
+    cur.close()
+    info = []
+    for row in rows:
+        info.append(row)
+    return render_template('Home.html',  title='Light', info1=info)
+
+
    
 @app.route('/About')
 def About():
@@ -27,74 +37,85 @@ def Espanol():
 @app.route('/CreateandRecieve', methods = ['GET', 'POST'])
 def CreateandRecieve():
     if request.method == 'POST':
-        flash("Submitted Sucessfully!")
+        flash("Submitted Sucessfully!", 'success')
         userDetails=request.form
-        if userDetails['passwd'] != userDetails['comfirmpass']:
-            flash("Password either didn't match or you aalready have an account")
+        if userDetails['password'] != userDetails['comfirmpass']:
+            flash("Password either didn't match or you already have an account, please login", 'danger')
             return render_template('CreateandReceive.html')
         print(userDetails)
         name = userDetails['name']
         surname = userDetails['surname']
+        password=userDetails['password']
         email=userDetails['email']
-        password=userDetails['passwd']
         comfirmpass=userDetails['comfirmpass']
+        futureAuthors=userDetails['futureAuthors']
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO user (name, surname, password, email, comfirmpass) VALUES(%s, %s, %s, %s,%s)", (name, surname, password, email, comfirmpass))
+        cur.execute("INSERT INTO user (name, surname, password, email, comfirmpass, futureAuthors) VALUES(%s, %s, %s, %s,%s,%s)", (name, surname, password, email, comfirmpass, futureAuthors))
         mysql.connection.commit()
         cur.close()
-        return redirect(url_for('Main'), 'Submitted sucessfully')
+        return redirect('/EnterQuote')
     return render_template('CreateandRecieve.html')
+
+@app.route('/CreateandRecieve')
+def fa():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT futureAuthors FROM user")
+    mysql.connection.commit()
+    rowws = cur.fetchall()
+    cur.close()
+    infoo = []
+    for ro in rowws:
+        info.append(ro)
+    return render_template('CreateandRecieve.html', info2=infoo)
     
 
     
 @app.route('/EnterQuote', methods = ['GET', 'POST'])
-def customerQuote():
+def customerQuotes():
+        
     if request.method == 'POST':
         userQuotes=request.form
-        quotes=userQuotes['quotes']
-        print(quotes)
+        NICK_NAME=userQuotes['NICK_NAME']
+        # print(quotes)
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO customerQuotes (quotes) VALUES(%s)", [quotes])
-        mysql.connection.commit()
+        resultValue = cur.execute("SELECT NICK_NAME FROM CUSTOMER_QUOTE WHERE NICK_NAME = (%s)", [NICK_NAME])
+        if resultValue > 0:
+            flash("Nickname already exists, quote not submitted", 'danger')
+        else:
+            flash("submitted sucessfully", 'success')
+            cur.execute("INSERT INTO CUSTOMER_QUOTE (NICK_NAME, QUOTE, FAVORITE_AUTHOR) VALUES(%s, %s, %s)", [NICK_NAME, QUOTE, FAVORITE_AUTHOR])
+            return "bye"
+        mysql.connection.commit()  
         cur.close()
     return render_template('EnterQuote.html')
 
 
+@app.route('/update', methods=['GET', 'POST'])
+def update():
+    if request.method == 'POST':
+        cur = mysql.connection.cursor()
+        NICK_NAME = request.form['NICK_NAME']
+        QUOTE = request.form['QUOTE']
+        FAVORITE_AUTHOR = request.form['FAVORITE_AUTHOR']
+        cur.execute("UPDATE CUSTOMER_QUOTE SET QUOTE = %s, FAVORITE_AUTHOR = %s WHERE NICK_NAME= %s", (QUOTE, FAVORITE_AUTHOR, NICK_NAME))
+        mysql.connection.commit()
+        cur.close()
+        flash('Updated successfully', 'success')
+        return redirect('/')
+    return render_template('EnterQuote.html')
 
+@app.route('/delete', methods=['GET','POST'])
+def delete():
+    if request.method == 'POST':
+        cur = mysql.connection.cursor()
+        NICK_NAME = request.form['NICK_NAME']
+        cur.execute("DELETE FROM CUSTOMER_QUOTE WHERE NICK_NAME = %s", [NICK_NAME])
+        mysql.connection.commit()
+        cur.close()
+        flash('Entry successfully deleted', 'success')
+        return redirect('/')
+    return render_template('EnterQuote.html')
 
-   
-
-
-
-
-# for i in password:
-#     output=''
-#     for x in range(i):
-#         output += '*'
-#         print(output)
-
-# return 'Submitted sucessfully'
-    # return redirect(url_for('home'))
-
-# @app.route('/Make and Recieve Devotional')
-# def Makemehappy():
-#     cur = mysql.connection.cursor()
-#     cur.execute('SELECT customer_quote FROM quotes WHERE u_id = customerInfo')
-#     mysql.connection.commit()
-#     rows = cur.fetchall()
-#     cur.close()
-    
-    
-# customerInfo = []
-# for i in rows:
-#     customerInfo.append(i)
-
-#     # print(info)
-#     return render_template('CreateandRecieve.html', details = customerInfo)
-
-# @app.route('/account/delete')
-# def account_delete():
-#     cur 
 
 if __name__ == "__main__":
     app.run('0.0.0.0', debug=True)

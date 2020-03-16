@@ -16,33 +16,22 @@
     </header>
   
 
-  <form method="POST" action="">
-        <center>
-        Delete <h3><input type = "text" name= "Delete"> <br></h3>
-        <input type = "submit">
-        </center>
-</form>
-
-<br> 
-
-    <form method="POST" action="">
-        <center>
-        Update<h3><input type = "text" name= "Update"> <br></h3>
-        <input type = "submit">
-        </center>
-</form>
-
-
-
 <form method="POST" action="{{url_for('CreateandRecieve')}}">
         <H1>Enter your details </H1> <br>
         Name <h3><input type = "text" name= "name" /> <br></h3>
         Surname <h3><input type = "text" name = "surname" /> <br></h3>
-        Password <h3><input type = "text" name = "passwd" /> <br></h3>
+        Password <h3><input type = "text" name = "password" /> <br></h3>
         Email <h3><input type = "text" name = "email" /> <br></h3>
         Comfirm your pass <h3><input type = "text" name = "comfirmpass" /> <br></h3>
+        Add to list of requested Authors<input type = "text" name = "futureAuthors" /> <br></h3>
         <input type = "submit">
    </form>
+
+
+
+    
+
+</body>
 {% with messages = get_flashed_messages() %}
         {%if messages%}
         {%for message in messages%}
@@ -51,11 +40,17 @@
         {%endfor%}
         {%endif%}
         {%endwith%}
+<br>
+<p style='background-color: #00FFFF'>See requested Authors...</p>
+ <table border =3>
+   {% for i in info2 %}
+      <tr>
+      <th><li>{{ i[0] }}</li></th>
+      <br>
+            <th><li>{{ i[1] }}</li></th>
+<br>
+      <th><li>{{ i[2] }}</li></th>
 
-        {% for message in get_flashed_messages() %}
-    <p> {{ message }} </p>
-    {% endfor %}
-
-</body>
-
+      </tr>
+{% endfor %}
 {% endblock %}

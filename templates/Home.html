@@ -1,17 +1,24 @@
 {% extends 'layout.html' %}
-
 {% block body %}
-
+   <body>
       <h1>{{ title }}</h1>
+ <style>
+body {
+  background-image: url('https://previews.123rf.com/images/melitas/melitas1812/melitas181200046/114265165-resurrection-christian-cross-with-clouds-sky-background-life-after-death.jpg');
+  background-repeat: no-repeat;
+  background-size: 2000px 1000px;
+}
+</style>
       <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">Our prayers over the years still continues to be the same. 
       Wanting  to see and experince lives transformed through the power of Jesus Christ Our Lord. For the hands of heaven touch the earth.</p>
 
       <header>
-         <h4 style="color:crimson">What we belief!</h4>
+         <h4 style="color: #00FFFF">What we belief!</h4>
       </header>
+   </body>
 
-      <article>
-      <p>
+   <article>
+      <p style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic";>
         We believe that sin has separated each of us from God and His purpose for our lives. We believe that the Lord Jesus Christ as both God and man 
         is the only One who can reconcile us to God. He lived a sinless and exemplary life, died on the cross in our place, and rose again to prove His victory and 
         empower us for life. We believe that in order to receive forgiveness and the 'new birth' we must repent of our sins, believe in the Lord Jesus Christ, and 
@@ -22,15 +29,22 @@
         in which we live.We believe that God wants to heal and transform us so that we can live healthy and blessed lives in order to help others more effectively.
     </p>
       </article>
+<br>
+<p style='background-color: #00FFFF'>See quotes people have added...</p>
+<br>
+<table border =3>
+   {% for i in info1 %}
+      <tr>
+      <th><li>{{ i[0] }}</li></th>
+      <br>
+            <th><li>{{ i[1] }}</li></th>
+<br>
+      <th><li>{{ i[2] }}</li></th>
 
-    {% endblock %}
-      
+      </tr>
 
- {% for i in details %} 
- <li><a> {{ i[3] }}</a></li>
-   
+
    {% endfor %}
 
-
-
-
+   
+{% endblock %}

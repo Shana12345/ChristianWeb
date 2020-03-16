@@ -2,10 +2,33 @@
 {% block body %}
     
     <center>
-    <form method="POST" action="{{url_for('customerQuote')}}">
+    <form method="POST" action="{{url_for('customerQuotes')}}" >
     <H1>Enter your Quote</H1> <br>
-        Quotes<h6><input type = "text" name= "quotes"> <br></h6>
+        Enter A NickName<h3><input type = "text" name= "NICK_NAME"> <br></h3>
+        Create Your Quote<h3><input type = "text" name= "QUOTE"> <br></h3>
+        Favorite Author<h3><input type = "text" name= "FAVORITE_AUTHOR"> <br></h3>
         <input type = "submit">
+    </form>
+<br>
+<br>
+ 
+    
+    <form method="POST" action="{{url_for('delete')}}">
+        <center>
+        <H1>Delete My Entry</H1><br>
+        Delete <h3><input type = "text" name= "NICK_NAME"> <br></h3>
+        <input type = "submit">
+        </center>
+    </form>
+<br>
+<br>
+    <form method="POST" action="{{url_for('update')}}">
+        <center>
+        Enter A NickName<h3><input type = "text" name= "NICK_NAME"> <br></h3>
+        Update Your Quote<h3><input type = "text" name= "QUOTE"> <br></h3>
+        Update Your Author<h3><input type = "text" name= "FAVORITE_AUTHOR"> <br></h3>
+        <input type = "submit">
+        </center>
 </form>
 </center>
 {% endblock%}
