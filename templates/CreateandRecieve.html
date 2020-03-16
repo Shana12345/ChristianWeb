@@ -1,6 +1,74 @@
 {% extends 'layout.html' %}
 {% block body %}
 
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+ ul li {
+   margin-top:10px;
+}
+
+header {
+  background: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  width: 500px;
+  overflow: auto;
+  padding: 3rem 2rem;
+}
+
+#shana-devotionals {
+  padding: 2rem;
+  background: black;
+  border-radius: 15px
+}
+
+#shana-devotionals label {
+  display: block;
+}
+
+#shana-devotionals input[type='text'] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  background: #333;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.btn:hover {
+  background: red;
+}
+
+
+
+</style>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,17 +90,32 @@
         Surname <h3><input type = "text" name = "surname" /> <br></h3>
         Password <h3><input type = "text" name = "password" /> <br></h3>
         Email <h3><input type = "text" name = "email" /> <br></h3>
-        Comfirm your pass <h3><input type = "text" name = "comfirmpass" /> <br></h3>
-        Add to list of requested Authors<input type = "text" name = "futureAuthors" /> <br></h3>
-        <input type = "submit">
+        Comfirm your pass <h3><input type = "text" name = "comfirmpass" /><br></h3>
+        <br>
+        <br>
+        <h2 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;"><b>WE VALUE YOUR FEEDBACK!</h2></b>
+        <h3 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">Your feedback helps us as a company, and by providing feedback we can update our list to better suit you! </h3>
+        <h3 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">Add an Author?(optional)</h3><br>
+        Add to list of requested Authors<h3><input type = "text" name = "futureAuthors" /></h3><br>
+          <div>
+                <input class="btn" type="submit" value="Register">
+
+            </div>
    </form>
-
-
-
+  
+   <br>
+<table border =3>
+<h4  style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">See requested Authors...</h4>
+   {% for d in info2 %}
+      <tr>
+      <th><li>{{ d[0] }}</li></th>
     
+            <th><li>{{ d[1] }}</li></th>
 
-</body>
-{% with messages = get_flashed_messages() %}
+      <th><li>{{ d[2] }}</li></th>
+
+      </tr>
+      {% with messages = get_flashed_messages() %}
         {%if messages%}
         {%for message in messages%}
         {{message}}
@@ -40,17 +123,5 @@
         {%endfor%}
         {%endif%}
         {%endwith%}
-<br>
-<p style='background-color: #00FFFF'>See requested Authors...</p>
- <table border =3>
-   {% for i in info2 %}
-      <tr>
-      <th><li>{{ i[0] }}</li></th>
-      <br>
-            <th><li>{{ i[1] }}</li></th>
-<br>
-      <th><li>{{ i[2] }}</li></th>
-
-      </tr>
-{% endfor %}
+{% endfor %} 
 {% endblock %}

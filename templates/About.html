@@ -1,7 +1,131 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+<style>
 
+body{
+background-color:#f4f4f4;
+color:#555555;
+
+font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight:400;
+  margin:0;
+}
+
+header {
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-transform:uppercase;
+  letter-spacing: 0.2em
+}
+
+
+.ImageBorder
+{ background:orangered;
+    padding:5px;
+    margin-bottom:15px;
+    border:10px; 
+    border-radius:15px
+    
+}
+
+.container {
+  margin: auto;
+  width:70%;
+}
+
+
+.box-1{
+ background-color:#333;
+ color:#fff;
+ border: 5px red solid;
+ border-radius:15px;
+ height: 310px;
+ 
+
+
+ position:relative;/*ie needs this to show float */
+ width:27%;
+ float:right;
+ margin-right:-32%;/*must be same as width */
+ margin-left:10px;
+
+ margin-top:-9px;
+
+ padding: 1px;
+ margin:5px 0;
+}
+
+.box-1 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+text-transform:lowercase;
+}
+
+
+.box-2{
+background-color:orangered;
+color:#fff;
+border: 5px #333 solid;
+border-radius:15px;
+height: 260px;
+width: 700px;
+
+
+padding: 10px;
+margin-top:10px;
+margin:10px 0;
+}
+
+
+.box-2 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+
+}
+
+.box-2 h3{
+font-family:Tahoma;
+text-decoration: bold;
+}
+
+.box-3{
+background-color:red;
+color:#fff;
+border: 5px #333 solid;
+border-radius:15px;
+height: 320px;
+width: 700px;
+
+
+padding: 10px;
+margin-top:10px;
+margin:10px 0;
+}
+
+.box-3 h2{
+font-family:Tahoma;
+font-weight:800;
+font-style:italic;
+text-decoration: bold;
+}
+
+.box-3 h3{
+font-family:Tahoma;
+text-decoration: bold;
+}
+
+
+
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="Descripción" content="Citas Bíblicas">
@@ -17,18 +141,18 @@
             </header>
             <br>
             <br>
-            <center><img src="Majestad.jpg" width="250" height="200" class="ImageBorder" /></center>
+             <center><img src="https://i.pinimg.com/originals/45/c9/4d/45c94d487fcf74e7382950d185b02295.jpg";></center>
 
             <article>
                 <div class="box-1">
-                    <h2>
-                        <font size="3"><u><b>Who is The Author of Salvation</b></u></font>
-                    </h2>
-                    <p>
-                        <font size="1">We believe that the Lord Jesus Christ as both God and man is the only One who can reconcile us to God. 
+            
+                         <h2><u><b>Who is The Author of Salvation</b></u></h2>
+                
+                    
+                        <p>We believe that the Lord Jesus Christ as both God and man is the only One who can reconcile us to God. 
                         He lived a sinless and exemplary life, died on the cross in our place, and rose again to prove His victory and empower us for life.
                             <br>
-                            <br><b>"  For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. " John 3:16</font></p></b>
+                            <br><b>"  For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. " John 3:16</p>
                 </div>
             </article>
 
@@ -36,8 +160,7 @@
                 <div class="box-2 ">
                     <h2><u><b>God's love is shown through Jesus Christ</b></u></h2>
                     <h3><b>1 John 4:9-11</b></h3>
-                    <p>"God showed how much he loves us by sending his only Son into the world, so that we may have eternal life through him. This is true love: not that we have loved God, but that he loved us and sent
-                         His Son as a sacrifice to take away our sins. Dear friends, since God loved us so much, no doubt we should also love each other. "</p>
+                    <p>"God showed how much he loves us by sending his only Son into the world, so that we may have eternal life through him. This is true love: not that we have loved God, but that he loved us and sent. His Son as a sacrifice to take away our sins. Dear friends, since God loved us so much, no doubt we should also love each other."</p>
                 </div>
             </article>
 
@@ -45,8 +168,7 @@
                 <div class="box-3 ">
                     <h2><b><u>God loves and cares for us</u></b></h2>
                     <h3><b>Ephesians 2:4-5</b></h3>
-                    <p>"But God is so rich in mercy and loved us so much that, even though they died because of our sins, He gave us life when He became the Christ of the dead. (It is only by the grace of God that you have been saved!)"
-                    </p>
+                    <p>"But God is so rich in mercy and loved us so much that, even though they died because of our sins, He gave us life when He became the Christ of the dead. (It is only by the grace of God that you have been saved!)"</p>
                     <h3><b>Zephaniah 3:17</b></h2>
                         <p>"For the Lord your God lives in your midst. He is a powerful savior. He will delight in you with joy. With his love he will calm all your fears. He will rejoice for you with songs of joy. "</p>
                         <br>
@@ -62,6 +184,7 @@
 for this like copy right
    </footer>
 -->
+
 
 </body>
 {% endblock %}

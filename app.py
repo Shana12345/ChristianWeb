@@ -41,7 +41,7 @@ def CreateandRecieve():
         userDetails=request.form
         if userDetails['password'] != userDetails['comfirmpass']:
             flash("Password either didn't match or you already have an account, please login", 'danger')
-            return render_template('CreateandReceive.html')
+        # return render_template('CreateandReceive.html')
         print(userDetails)
         name = userDetails['name']
         surname = userDetails['surname']
@@ -56,7 +56,7 @@ def CreateandRecieve():
         return redirect('/EnterQuote')
     return render_template('CreateandRecieve.html')
 
-@app.route('/CreateandRecieve')
+@app.route('/Cr')
 def fa():
     cur = mysql.connection.cursor()
     cur.execute("SELECT futureAuthors FROM user")
@@ -76,6 +76,8 @@ def customerQuotes():
     if request.method == 'POST':
         userQuotes=request.form
         NICK_NAME=userQuotes['NICK_NAME']
+        QUOTE=userQuotes['QUOTE']
+        FAVORITE_AUTHOR=userQuotes['FAVORITE_AUTHOR']
         # print(quotes)
         cur = mysql.connection.cursor()
         resultValue = cur.execute("SELECT NICK_NAME FROM CUSTOMER_QUOTE WHERE NICK_NAME = (%s)", [NICK_NAME])
@@ -84,9 +86,9 @@ def customerQuotes():
         else:
             flash("submitted sucessfully", 'success')
             cur.execute("INSERT INTO CUSTOMER_QUOTE (NICK_NAME, QUOTE, FAVORITE_AUTHOR) VALUES(%s, %s, %s)", [NICK_NAME, QUOTE, FAVORITE_AUTHOR])
-            return "bye"
-        mysql.connection.commit()  
-        cur.close()
+            mysql.connection.commit()  
+            cur.close()
+            return redirect('/')
     return render_template('EnterQuote.html')
 
 
