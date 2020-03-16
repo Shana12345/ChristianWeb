@@ -22,7 +22,7 @@ def Main():
     info = []
     for row in rows:
         info.append(row)
-    return render_template('Home.html',  title='Lighti', info1=info)
+    return render_template('Home.html',  title='Lighti1', info1=info)
 
 
    
