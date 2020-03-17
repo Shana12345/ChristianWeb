@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     stages {
         stage('Development Environment') {
             steps {
@@ -12,7 +11,11 @@ pipeline {
                 sh 'sudo systemct1 status flask.service'
                 sh 'sudo systemct1 restart flask.service'
             }
-
+        }
+        stage('Testing'){
+            steps {
+                sh 'pytest ./test/testing.py'
+            }
         }
     }
 }
