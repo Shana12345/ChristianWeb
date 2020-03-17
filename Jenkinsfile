@@ -14,9 +14,9 @@ pipeline {
         stage('Testing'){
             steps {
                 sh 'pytest ./test/testing.py'
-                pip3 show coverage
-                coverage run -m pytest test/testing.py
-                coverage report -m
+                sh 'pip3 show coverage'
+                sh 'coverage run -m pytest -m  ./test/testing.py'
+                sh 'coverage report -m'
         }
     }
 }
