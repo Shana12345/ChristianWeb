@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    stages {
         stage('Development Environment') {
             steps {
                sh 'chmod +x ./script/*'
