@@ -11,9 +11,11 @@ pipeline {
                 sh 'sudo systemct1 restart flask.service'
             }
         }
-        stage('Testing'){
+         stage('Testing'){
             steps {
-                sh 'pytest ./test/testing.py'
+                    sh 'chmod +x ./coverage/*'
+                    sh './coverage/testing.sh'
+                    sh 'python -m pytest ./test/testing.py'
             }
         }
     }
