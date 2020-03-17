@@ -37,7 +37,7 @@ def Espanol():
 @app.route('/CreateandRecieve', methods = ['GET', 'POST'])
 def CreateandRecieve():
     if request.method == 'POST':
-        flash("Submitted Sucessfully!", 'success')
+        # flash("Submitted Sucessfully!", 'success')
         userDetails=request.form
         if userDetails['password'] != userDetails['comfirmpass']:
             flash("Password either didn't match or you already have an account, please login", 'danger')
@@ -53,7 +53,7 @@ def CreateandRecieve():
         cur.execute("INSERT INTO user (name, surname, password, email, comfirmpass, futureAuthors) VALUES(%s, %s, %s, %s,%s,%s)", (name, surname, password, email, comfirmpass, futureAuthors))
         mysql.connection.commit()
         cur.close()
-        return redirect('/EnterQuote')
+        return redirect('/Cr')
     return render_template('CreateandRecieve.html')
 
 @app.route('/Cr')
@@ -65,7 +65,7 @@ def fa():
     cur.close()
     infoo = []
     for ro in rowws:
-        info.append(ro)
+        infoo.append(ro)
     return render_template('CreateandRecieve.html', info2=infoo)
     
 

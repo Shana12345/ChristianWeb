@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:georgia,garamond,serif;font-size:20px;font-style:italic;
   line-height: 1.6;
 }
 
@@ -83,31 +83,60 @@ header {
         <h1 style="color:crimson">Recieve The Word of the day!</h1>
     </header>
   
+<section class="container">
+<form id="shana-devotionals" method="POST" action="{{url_for('CreateandRecieve')}}">
+        <h1 style="color: salmon">Enter your details<br>
+        </h1>
 
-<form method="POST" action="{{url_for('CreateandRecieve')}}">
-        <H1>Enter your details </H1> <br>
-        Name <h3><input type = "text" name= "name" /> <br></h3>
-        Surname <h3><input type = "text" name = "surname" /> <br></h3>
-        Password <h3><input type = "text" name = "password" /> <br></h3>
-        Email <h3><input type = "text" name = "email" /> <br></h3>
-        Comfirm your pass <h3><input type = "text" name = "comfirmpass" /><br></h3>
+        <div style="color: #f4f4f4">Name <input type = "text" name= "name" /> <br>
+        </div>
+
+        <div style="color: #f4f4f4">Surname<input type = "text" name = "surname" /> <br>
+        </div>
+
+        <div style="color: #f4f4f4">Password<input type = "text" name = "password" /> <br>
+        </div>
+
+        <div style="color: #f4f4f4">Email<input type = "text" name = "email" /> <br>
+        </div>
+
+        <div style="color: #f4f4f4">Comfirm your pass<input type = "text" name = "comfirmpass" /><br>
+        </div>
         <br>
         <br>
-        <h2 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;"><b>WE VALUE YOUR FEEDBACK!</h2></b>
-        <h3 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">Your feedback helps us as a company, and by providing feedback we can update our list to better suit you! </h3>
-        <h3 style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">Add an Author?(optional)</h3><br>
-        Add to list of requested Authors<h3><input type = "text" name = "futureAuthors" /></h3><br>
+        <h4 style="color: #787878"><b>WE VALUE YOUR FEEDBACK!</h4></b>
+        <h5 style="color: #787878">Your feedback helps us as a company, and by providing feedback we can update our list to better suit you! </h5>
+        <h5 style="color: #787878">Add an Author?(optional)</h5><br>
+        <div style="color: #f4f4f4">Add to list of requested Authors<input type = "text" name = "futureAuthors" /></div><br>
+          
           <div>
                 <input class="btn" type="submit" value="Register">
 
             </div>
    </form>
+   
+   <ul id="users"></ul>
+        <ul class="items">
+            <a href="https://www.youtube.com/watch?v=PL6dk7WmP60"></a>
+            </li>
+
+            <a href="https://www.youtube.com/watch?v=2JFS5GmSCqY"></a>
+            </li>
+
+            <a href="https://www.youtube.com/watch?v=lYoLQ08d_Xg"></a>
+            </li>
+
+        </ul>
+
+
+        <script src="extraa.js"></script>
+</section> 
   
    <br>
 <table border =3>
 <h4  style = "font-family:georgia,garamond,serif;font-size:20px;font-style:italic;">See requested Authors...</h4>
    {% for d in info2 %}
-      <tr>
+      <tr style="color: white">
       <th><li>{{ d[0] }}</li></th>
     
             <th><li>{{ d[1] }}</li></th>
