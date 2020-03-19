@@ -1,14 +1,19 @@
-# Personal yoga application
-
-In fulfilment of the solo project assignment due Monday week 7 at QA consulting.
-
+# Christian Web
 ## Index
 [Brief](#brief)
    * [Solution](#solution)
    
 [Construction](#construction)
-   * [Entity Relationship Diagrams](#erd)
-   * [ERD](#mla)
+   * [Orignial ERD](#erd)
+   * [Final ERD](#Final ERD)
+   * [Risk Assessment](#risk_assessment)	
+   * [Risk Assessment Table](#risk_table)
+	* [User Stories](#userstories)
+
+[Sprints & Planning](#spr1)
+   * [Trello Board Sprint 1.0](#spr1)
+   * [Trello Board Sprint 2.0](#spr2) 
+   * [Trello Board Completion Stage](# sprcompletion)
 	
 [Testing](#testing)
    * [Report](#report)
@@ -27,57 +32,77 @@ In fulfilment of the solo project assignment due Monday week 7 at QA consulting.
 
 <a name="brief"></a>
 ## The Brief
-The aim is to create an OOP based application using CRUD method.
-Here the incooporation of tools methods and technologies was implemente. 
-The application must be able to control and alter data via at two tables via the functionality of CRUD.
-
-
+The aim is to create an OOP based application using CRUD method. Here the incorporation of tools methods and technologies was implemented.  The application must be able to control and alter data via at two tables via the functionality of CRUD.
 
 <a name="solution"></a>
 ### Solution
-I choice to make a Christian ebsite through Flask. The purpose of the website was for customers to be able to add information such 
-as a motivation quote and they would be redirected to the home page, from there they would be able to see and read the their quote.
-This intended to cover the CR in CRUD. Next the customer would have ghe ablity to enter in an author and if it is one the database, 
-then they can see all the authors informations such as famous quotes, books, and songs they have either written or have used in the church in their daily life. 
-The reason for this part of so that the user can updated the website. They can update informtion based on the authors, so like a christian wikipedia website. This 
-was implemented for the customer to cover the UD in CRUD. Whereby the customer can update and delete. 
-
-
+I choice to make a Christian website through Flask. The purpose of the website was for customers to be able to add information such as a motivation quote and they would be redirected to the home page, from there they would be able to see and read their quote.
+This intended to cover the CR in CRUD. Next the customer would have the ability to enter in an author and if it is one the database, 
+then they can see all the authors information such as famous quotes, books, and songs they have either written or have used in the church in their daily life. 
+The reason for this part of so that the user can updated the website. They can update information based on the authors, so like a Christian Wikipedia website where people can find out random information related to Christianity except they cannot edit another information. This was implemented for the customer to cover the UD in CRUD. Whereby the customer can update and delete. 
 <a name="construction"></a>
 ## Construction
 <a name="erd"></a>
 ### ERD
 #### Starting Plan
-![Initial ERD](/fotos4projecto/original.jpg)
-The original ERD consisted of just 2 tables, bother of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for ones liking, 
-also to enhance CRUD by adding foreign keys. 
+![Initial ERD](/images/Original.jpg)
+The original ERD consisted of just 2 tables, bother of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for one’s liking, also with the aim to enhance CRUD by adding foreign keys. 
 
 #### Delivered solution
-![Final ERD](/fotos4projecto/ERD_Final.jpg)
-The origin plan for the ERD consisted of less tables and entities than were produced in the final application. The reason for the extra table was to add more functionailty to the application.
-Futhermore, to better see and understand how foriegn keys worked on a website.  
-As shown in the the image, a colour code of each element of the tables and their entities represent what was a priorties, and what could be held in a queue of 'things to do'.
-Also showing what was added and wasn't part of the original design. The elements in green represent all things part of the orignal design, and what was a must. The ones in green short the what was a must to meet CRUD.
-The colours in purple, represented things that where not part of the original plan but was add to the final appliation. Lastly, the ones in pink represent things that had not yet been made,
-and was the least a priorty, reason either being the main table for that entity may not have been created or simply because they was optional.
+![Final ERD](/images/Final.jpg)
+The origin plan for the ERD consisted of less tables and entities than were produced in the final application. The reason for the extra table was to add more functionality to the application.
+Furthermore, to better see and understand how foreign keys worked on a website.  As shown in the image, a colour code of each element of the tables and their entities represent what was a priority, and what could be held in a queue of 'things to do'.
+Also showing what was added and wasn't part of the original design. The elements in green represent all things part of the original design, and what was a must. The ones in green short the what was a must to meet CRUD.
+The colours in purple, represented things that were not part of the original plan but was add to the final application. Lastly, the ones in pink represent things that had not yet been made,
+and was the least a priority, reason either being the main table for that entity may not have been created or simply because they were optional.
 
+<a name=" risk_assessment "></a>
+## Risk Assessment
+Here, the risk assessment is analysing potential actions that can have a negative impact towards individuals, or the surrounding.
+<a name="risktable"></a>
+## Risk Assessment Table
+![Risk Assessment Table](/Final/risktable.jpg)
+
+<a name="userstories"></a>
+## User Stories (Users and Developers)
+To create the user stories, Trello was used, there was listed all the use-cases for the product in the terms of a ‘user’ and ‘developer’.
+![UserStories](/Final/userdev.jpg)
+
+
+<a name="spr1"></a>
+## Trello Board (Sprint 1)
+
+Fddfsfsfsfsdasd
+Dasdsadadasdad
+
+![Sprint 1 Image](/images/sprint1.jpg)
+
+<a name="spr2"></a>
+## Trello Board (Sprint 2)
+
+You can see tasks from the first Sprint have been moved to the Done list and further tasks have been actioned and moved to the second Sprint stage.
+![Sprint 2 Image](/ fotos4projecto /sprint2.jpg)
+
+
+<a name="sprcompletion"></a>
+## Last Sprint to completion
+The project is now in the completion stage, all requirements have been met and optional features have been added, also some un-needed features were not implemented such as the search function and an additional DB table due to time restraints.
+![Completion..](/fotos4projecto/finishedsprint.jpg)
 
 <a name="testing"></a>
-## Testing
+### Testing
+## URL Testing
+![Initial ERD](/fotos4projecto/URL.jpg)
+Here was the creation of testing in order to test. Code to test was being created in python for each area of the application. Firstly, the code to test the application’s URL was created. Once it was made it was they pushed up to GitHub, to invoke Jenkins, once Jenkins was triggered the results could be seen on Jenkins console to see whether it was a success or not. 
 
-code for testing
-python URL assert 
-database testing assert
-see the results on jenkins
+
+## Database Testing 
+![Initial ERD](/fotos4projecto/DB.jpg)
 
 
 <a name="report"></a>
 ### Report
-
-[Link to Final Surefire Report](/Documentation/Surefire_Report.pdf)
-
-Test coverage for the backend is at 84%, there are as of yet no working Selenium tests but hope to get these running soon.
-The SonarQube static report shows 9 code smells remaining, 0 bugs, 0 duplications and 0 vulnerabilities.
+Test coverage for the backend is at 84%, there are as of yet no working Selenium tests but hope to get these running soon. The SonarQube static report shows 9 code smells remaining, 0 bugs, 0 duplications and 0 vulnerabilities.
 
 <a name="depl"></a>
 ## Deployment
