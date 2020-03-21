@@ -6,9 +6,9 @@ pipeline {
                 sh 'chmod +x ./script/*'
                     sh './script/before_installation.sh'
                     sh './script/installation.sh'
-                    sh './script/make_script.sh'
-                    sh 'sleep 10'
-                    sh './script/make_service.sh'
+                    sh 'sudo systemctl enable flask.service'
+                    sh 'sudo systemctl start flask.service'
+                    sh 'sudo systemctl status flask.service'
                 }
             }
             stage('Testing'){
