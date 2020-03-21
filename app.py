@@ -4,7 +4,7 @@ import os
 
 
 app = Flask(__name__) #assign your name 'app'
-app.config["MYSQL_HOST"] = os.environ['MYSQLHOST'] #IP address of SQL database 
+app.config["MYSQL_HOST"] = os.environ['MYSQL'] #IP address of SQL database 
 app.config["MYSQL_USER"] = os.environ['MYSQLUSER']#Username for DB
 app.config["MYSQL_PASSWORD"] = os.environ['MYSQLPASSWORD']#Password for DB
 app.config["MYSQL_DB"] = os.environ['MYSQLDB'] #Databse being used
