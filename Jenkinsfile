@@ -12,6 +12,8 @@ pipeline {
 
                     sh 'chmod +x ./script/*' 
 
+                    sh 'chmod +x ./coverage.sh'
+
                     sh './script/before_installation.sh' 
 
                     sh './script/make_script.sh'
