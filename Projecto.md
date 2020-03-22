@@ -21,7 +21,7 @@
 [Deployment](#depl)
    * [Technologies Used](#tech)
      
-[Front End Design](#FE)
+[Front End Design](#visrep)
 
 [Improvements for the Future](#improve)
 
@@ -35,16 +35,15 @@ The aim is to create an OOP based application using CRUD method. Here the incorp
 
 <a name="solution"></a>
 ### Solution
-I choice to make a Christian website through Flask. The purpose of the website was for customers to be able to add information such as a motivation quote and they would be redirected to the home page, from there they would be able to see and read their quote.
-This intended to cover the CR in CRUD. Next the customer would have the ability to enter in an author and if it is one the database, 
-then they can see all the authors information such as famous quotes, books, and songs they have either written or have used in the church in their daily life. 
-The reason for this part of so that the user can updated the website. They can update information based on the authors, so like a Christian Wikipedia website where people can find out random information related to Christianity except they cannot edit another information. This was implemented for the customer to cover the UD in CRUD. Whereby the customer can update and delete. 
+I chose to make a Christian website through Flask. The purpose of the website was for customers to be able to add information such as a motivation quote and they would be redirected to the home page, from there they would be able to see and read their quote.
+This intended to cover the CR in CRUD. Next the customer can pick a favorite author number, and the name of the author would be displayed as their current favorite author.
+The reason for this part of so that the user can updated the website. They can update information based on the authors, like a Christian Wikipedia/blog website where people can find out random information related to Christianity. Customer's cannot edit another person's post. This was implemented for the customer to cover the UD in CRUD. Whereby the customer can update and delete. 
 <a name="construction"></a>
 ## Construction
 <a name="erd"></a>
 ### ERD
 #### Starting Plan
-The original ERD consisted of just 2 tables, bother of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for one’s liking, also with the aim to enhance CRUD by adding foreign keys. 
+The original ERD consisted of just 2 tables, both of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for one’s liking, also with the aim to enhance CRUD by adding foreign keys. 
 
 ![Initial ERD](/images/Original.PNG)
 
@@ -52,10 +51,11 @@ The original ERD consisted of just 2 tables, bother of which never had foreign k
 #### Delivered solution
 <a name="Final_ERD"></a>
 The origin plan for the ERD consisted of less tables and entities than were produced in the final application. The reason for the extra table was to add more functionality to the application.
-Furthermore, to better see and understand how foreign keys worked on a website.  As shown in the image, a colour code of each element of the tables and their entities represent what was a priority, and what could be held in a queue of 'things to do'.
-Also showing what was added and wasn't part of the original design. The elements in green represent all things part of the original design, and what was a must. The ones in green short the what was a must to meet CRUD.
+Furthermore, to better see and understand how foreign keys worked on a website.  As shown in the image, a colour code of each element of the tables and their entities represents what was a priority, and what could be held in a queue of 'things to do'.
+
+The elements in green represent all things part of the original design, and what was a must. The ones in green was a must, to meet CRUD.
 The colours in purple, represented things that were not part of the original plan but was add to the final application. Lastly, the ones in pink represent things that had not yet been made,
-and was the least a priority, reason either being the main table for that entity may not have been created or simply because they were optional.
+and was the least important, the reason either being the main table for that entity may not have been created or simply because they were optional.
 
 ![Final ERD](/images/Final.PNG)
 
@@ -72,7 +72,6 @@ Here, the risk assessment is analysing potential actions that can have a negativ
 
 ## Risk Assessment Table
 ![Risk Assessment Table1](/images/risktable1.PNG)
-
 ![Risk Assessment Table2](/images/risktable2.PNG)
 
 <a name="userstories"></a>
@@ -84,7 +83,7 @@ To create the user stories, Trello was used, there was listed all the use-cases 
 
 <a name="spr1"></a>
 ## Trello Board (Sprint)
-Each entry represents a sprint. Each sprint was roughly 4 days, however each need to be met. 
+Each entry represents a sprint. Each sprint was roughly 4 days, however each needed to be met. 
 
 ![Sprint](/images/sprint.PNG)
 
@@ -94,7 +93,7 @@ Each entry represents a sprint. Each sprint was roughly 4 days, however each nee
 
 <a name="sprcompletion"></a>
 ## Trello to completion
-The project is now in the completion stage, where all are moved to the 'Done' as all tasks was complete along with other optional features and functionality, futhermore, other feature (un-needed) features were not implemented such as the search function because of time limitations.
+The project is now in the completion stage, where all are moved to the 'Done' as all tasks was complete along with other optional features and functionality, futhermore, other features (un-needed) were not implemented such as the search function because of time limitations.
 
 ![Completed..](/images/Done.PNG)
 
@@ -105,7 +104,7 @@ The project is now in the completion stage, where all are moved to the 'Done' as
 <a name="testing"></a>
 ### Testing
 ## URL Testing
-Here was the creation of testing in order to test. Code to test was being created in python for each area of the application. Firstly, the code to test the application’s URL was created. Once it was made it was they pushed up to GitHub, to invoke Jenkins, once Jenkins was triggered the results could be seen on Jenkins console to see whether it was a success or not. 
+Here was the creation of testing in order to test. Code to test was being created in python for each area of the application. Firstly, the code to test the application’s URL was created. Once it was made it was then pushed up to GitHub, to invoke Jenkins, once Jenkins was triggered the results could be seen on Jenkins console to see whether it was a success or not. 
 
 ![Initial ERD](/images/URL.PNG)
 
