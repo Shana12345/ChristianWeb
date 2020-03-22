@@ -11,9 +11,8 @@
 	* [User Stories](#userstories)
 
 [Sprints & Planning](#spr1)
-   * [Trello Board Sprint 1.0](#spr1)
-   * [Trello Board Sprint 2.0](#spr2) 
-   * [Trello Board Completion Stage](# sprcompletion)
+   * [Trello Board Sprint 1.0](#spr1) 
+   * [Trello Board Completion Stage](#sprcompletion)
 	
 [Testing](#testing)
    * [Report](#report)
@@ -58,82 +57,108 @@ and was the least a priority, reason either being the main table for that entity
 
 <a name=" risk_assessment "></a>
 ## Risk Assessment
+# Requirements / Product Backlog
+Here, is where all the requirments of the project are listed, though it isn't coloured coded here to show the list of priorties, as it was preferred to colour code the actually ERD diagram as it was a better way of prioritising. 
+
+![Requirements4Light](/images/requirementsProductBacklog.jgp)
+
 Here, the risk assessment is analysing potential actions that can have a negative impact towards individuals, or the surrounding.
-<a name="risktable"></a>
+<a name="risk_table"></a>
 ## Risk Assessment Table
-![Risk Assessment Table](/Final/risktable.jpg)
+![Risk Assessment Table1](/images/risktable1.jpg)
+![Risk Assessment Table2](/images/risktable2.jpg)
 
 <a name="userstories"></a>
 ## User Stories (Users and Developers)
 To create the user stories, Trello was used, there was listed all the use-cases for the product in the terms of a ‘user’ and ‘developer’.
-![UserStories](/Final/userdev.jpg)
+![UserStories](/images/userdev.jpg)
 
 
 <a name="spr1"></a>
-## Trello Board (Sprint 1)
+## Trello Board (Sprint)
+Each entry represents a sprint. Each sprint was roughly 4 days, however each need to be met. 
 
-Fddfsfsfsfsdasd
-Dasdsadadasdad
+![Sprint](/images/sprint.jpg)
+![Sprints](/images/sprints.jpg)
 
-![Sprint 1 Image](/images/sprint1.jpg)
-
-<a name="spr2"></a>
-## Trello Board (Sprint 2)
-
-You can see tasks from the first Sprint have been moved to the Done list and further tasks have been actioned and moved to the second Sprint stage.
-![Sprint 2 Image](/ fotos4projecto /sprint2.jpg)
 
 
 <a name="sprcompletion"></a>
-## Last Sprint to completion
-The project is now in the completion stage, all requirements have been met and optional features have been added, also some un-needed features were not implemented such as the search function and an additional DB table due to time restraints.
-![Completion..](/fotos4projecto/finishedsprint.jpg)
+## Trello to completion
+The project is now in the completion stage, where all are moved to the 'Done' as all tasks was complete along with other optional features and functionality, futhermore, other feature (un-needed) features were not implemented such as the search function because of time limitations.
+![Completed..](/images/Done.jpg)
+![Complete..](/images/Done2.jpg)
+![Completed2..](/images/thingsAddedandCancelled.jpg)
 
 <a name="testing"></a>
 ### Testing
 ## URL Testing
-![Initial ERD](/fotos4projecto/URL.jpg)
 Here was the creation of testing in order to test. Code to test was being created in python for each area of the application. Firstly, the code to test the application’s URL was created. Once it was made it was they pushed up to GitHub, to invoke Jenkins, once Jenkins was triggered the results could be seen on Jenkins console to see whether it was a success or not. 
-
-
-## Database Testing 
-![Initial ERD](/fotos4projecto/DB.jpg)
-
+![Initial ERD](/image/URL.jpg)
 
 <a name="report"></a>
 ### Report
-Test coverage for the backend is at 84%, there are as of yet no working Selenium tests but hope to get these running soon. The SonarQube static report shows 9 code smells remaining, 0 bugs, 0 duplications and 0 vulnerabilities.
+## Database Testing and full coverage report
+Test coverage for the coverage report passed at 39%.
+![Initial ERD](/images/coverageReport.jpg)
 
 <a name="depl"></a>
 ## Deployment
 
-The build, test and deployment process was automated using Jenkins, with a webhook to GitHub which was triggered with every push event
+The automated build, test and deployment process was done by Jenkins, via a webhook to GitHub which was triggered with every push event. This website can be deployed both locally as well as externally by a virtual machine. 
 
-This application can be deployed both locally and externally through a virtual machine. The constants.js file has commented out options to switch from an external to local IP address.
-
-![Deployment Pipeline](/Documentation/CI_pipeline.jpg)
-<a name="tech"></a>
 ### Technologies Used
 
-* H2 Database Engine - Database
-* Java - Logic
-* Wildfly - Deployment
+* GCP Database Engine - Database
+* Python - Logic
 * Jenkins - CI Server
-* Maven - Dependency Management
-* Jacoco, EclEmma, Surefire - Test Reporting
-* SonarQube - Static Testing
-* [Git](https://github.com/ayshamarty/SoloProject.git) - VCS
-* [Trello](https://trello.com/qasoloproject) - Project Tracking
-* GCP - Live Environment
+* [Git](https://github.com/Shana12345/ChristianWeb.git) - VCS
+* [Trello](https://trello.com/b/rRkFyIuR/la-projecto-de-shana-charlery) - Project Tracking
 
-<a name="FE"></a>
-## Front End Design
-### Wireframes
-Poses
-![Poses Wireframe](/Documentation/Poses_Wireframe.png)
-Routines
-![Routines Wireframe](/Documentation/Routines_Wireframe.png)
-### Final Appearance
+
+<a name="visrep"></a>
+### Front End Visual Representation of my Solution
+
+### Home
+![HomePage](/images/Home.jpg)
+
+### About
+![AboutPage](/images/About.jpg)
+
+### CreateandRecieve
+![CRPage](/images/CreateandRecieve.jpg)
+
+### EnterQuote
+![EnterQuotePage](/images/EnterQuote.jpg)
+![EnterQuotePage2](/images/DeleteandUpdate.jpg)
+
+### De que se trata (spanish page)
+![SpanishPage](/images/Desetrata.jpg)
+
+
+## Registering and requesting a future author
+![fa](/images/requestingFuture.jpg)
+
+## Requested author added
+![ad](/images/requestedauthoradded.jpg)
+
+## Entering a quote
+![enter](/images/toenteraquote.jpg)
+
+## Quote added (redirected to Homepage)
+![qa](/images/quoteadded.jpg)
+
+## Updating my quote
+![upq](/images/toupdatequote.jpg)
+
+## Update added
+![upa](/images/quoteupdated.jpg)
+
+## Delete my quote
+![dq](/images/Deletemyquote.jpg)
+
+## Quote deleted
+![qd](/images/quotedeleted.jpg)
 
 <a name="improve"></a>
 ## Improvements for the Future
