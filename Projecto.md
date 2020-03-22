@@ -78,7 +78,7 @@ Here, the risk assessment is analysing potential actions that can have a negativ
 ## User Stories (Users and Developers)
 To create the user stories, Trello was used, there was listed all the use-cases for the product in the terms of a ‘user’ and ‘developer’.
 
-![UserStories](/images/userdev.PNG)
+![UserStories](/images/userdev.jpg)
 
 
 <a name="spr1"></a>
