@@ -44,7 +44,7 @@ The reason for this part of so that the user can updated the website. They can u
 <a name="erd"></a>
 ### ERD
 #### Starting Plan
-![Initial ERD](/images/Original.jpg?raw=true)
+![Initial ERD](/images/testingg.PNG)
 The original ERD consisted of just 2 tables, bother of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for one’s liking, also with the aim to enhance CRUD by adding foreign keys. 
 
 #### Delivered solution
