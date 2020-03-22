@@ -5,7 +5,7 @@
    
 [Construction](#construction)
    * [Orignial ERD](#erd)
-   * [Final ERD](#Final ERD)
+   * [Final ERD](#Final_ERD)
    * [Risk Assessment](#risk_assessment)	
    * [Risk Assessment Table](#risk_table)
 	* [User Stories](#userstories)
@@ -44,63 +44,64 @@ The reason for this part of so that the user can updated the website. They can u
 <a name="erd"></a>
 ### ERD
 #### Starting Plan
-![Initial ERD](/images/Original.jpg)
+![Initial ERD](/templates/images/Original.jpg)
 The original ERD consisted of just 2 tables, bother of which never had foreign keys. While it would have had all the requirements of CRUD it was bit too simple for one’s liking, also with the aim to enhance CRUD by adding foreign keys. 
 
 #### Delivered solution
-![Final ERD](/images/Final.jpg)
+<a name="Final_ERD"></a>
+![Final ERD](/templates/images/Final.jpg)
 The origin plan for the ERD consisted of less tables and entities than were produced in the final application. The reason for the extra table was to add more functionality to the application.
 Furthermore, to better see and understand how foreign keys worked on a website.  As shown in the image, a colour code of each element of the tables and their entities represent what was a priority, and what could be held in a queue of 'things to do'.
 Also showing what was added and wasn't part of the original design. The elements in green represent all things part of the original design, and what was a must. The ones in green short the what was a must to meet CRUD.
 The colours in purple, represented things that were not part of the original plan but was add to the final application. Lastly, the ones in pink represent things that had not yet been made,
 and was the least a priority, reason either being the main table for that entity may not have been created or simply because they were optional.
 
-<a name=" risk_assessment "></a>
+<a name="risk_assessment"></a>
 ## Risk Assessment
 # Requirements / Product Backlog
 Here, is where all the requirments of the project are listed, though it isn't coloured coded here to show the list of priorties, as it was preferred to colour code the actually ERD diagram as it was a better way of prioritising. 
 
-![Requirements4Light](/images/requirementsProductBacklog.jgp)
+![Requirements4Light](/templates/images/requirementsProductBacklog.jgp)
 
 Here, the risk assessment is analysing potential actions that can have a negative impact towards individuals, or the surrounding.
 <a name="risk_table"></a>
 ## Risk Assessment Table
-![Risk Assessment Table1](/images/risktable1.jpg)
-![Risk Assessment Table2](/images/risktable2.jpg)
+![Risk Assessment Table1](/templates/images/risktable1.jpg)
+![Risk Assessment Table2](/templates/images/risktable2.jpg)
 
 <a name="userstories"></a>
 ## User Stories (Users and Developers)
 To create the user stories, Trello was used, there was listed all the use-cases for the product in the terms of a ‘user’ and ‘developer’.
-![UserStories](/images/userdev.jpg)
+![UserStories](/templates/images/userdev.jpg)
 
 
 <a name="spr1"></a>
 ## Trello Board (Sprint)
 Each entry represents a sprint. Each sprint was roughly 4 days, however each need to be met. 
 
-![Sprint](/images/sprint.jpg)
-![Sprints](/images/sprints.jpg)
+![Sprint](/templates/images/sprint.jpg)
+![Sprints](/templates/images/sprints.jpg)
 
 
 
 <a name="sprcompletion"></a>
 ## Trello to completion
 The project is now in the completion stage, where all are moved to the 'Done' as all tasks was complete along with other optional features and functionality, futhermore, other feature (un-needed) features were not implemented such as the search function because of time limitations.
-![Completed..](/images/Done.jpg)
-![Complete..](/images/Done2.jpg)
-![Completed2..](/images/thingsAddedandCancelled.jpg)
+![Completed..](/templates/images/Done.jpg)
+![Complete..](/templates/images/Done2.jpg)
+![Completed2..](/templates/images/thingsAddedandCancelled.jpg)
 
 <a name="testing"></a>
 ### Testing
 ## URL Testing
 Here was the creation of testing in order to test. Code to test was being created in python for each area of the application. Firstly, the code to test the application’s URL was created. Once it was made it was they pushed up to GitHub, to invoke Jenkins, once Jenkins was triggered the results could be seen on Jenkins console to see whether it was a success or not. 
-![Initial ERD](/image/URL.jpg)
+![Initial ERD](/templates/image/URL.jpg)
 
 <a name="report"></a>
 ### Report
 ## Database Testing and full coverage report
 Test coverage for the coverage report passed at 39%.
-![Initial ERD](/images/coverageReport.jpg)
+![Initial ERD](/templates/images/coverageReport.jpg)
 
 <a name="depl"></a>
 ## Deployment
@@ -120,45 +121,45 @@ The automated build, test and deployment process was done by Jenkins, via a webh
 ### Front End Visual Representation of my Solution
 
 ### Home
-![HomePage](/images/Home.jpg)
+![HomePage](/templates/images/Home.jpg)
 
 ### About
-![AboutPage](/images/About.jpg)
+![AboutPage](/templates/images/About.jpg)
 
 ### CreateandRecieve
-![CRPage](/images/CreateandRecieve.jpg)
+![CRPage](/templates/images/CreateandRecieve.jpg)
 
 ### EnterQuote
-![EnterQuotePage](/images/EnterQuote.jpg)
-![EnterQuotePage2](/images/DeleteandUpdate.jpg)
+![EnterQuotePage](/templates/images/EnterQuote.jpg)
+![EnterQuotePage2](/templates/images/DeleteandUpdate.jpg)
 
 ### De que se trata (spanish page)
-![SpanishPage](/images/Desetrata.jpg)
+![SpanishPage](/templates/images/Desetrata.jpg)
 
 
 ## Registering and requesting a future author
-![fa](/images/requestingFuture.jpg)
+![fa](/templates/images/requestingFuture.jpg)
 
 ## Requested author added
-![ad](/images/requestedauthoradded.jpg)
+![ad](/templates/images/requestedauthoradded.jpg)
 
 ## Entering a quote
-![enter](/images/toenteraquote.jpg)
+![enter](/templates/images/toenteraquote.jpg)
 
 ## Quote added (redirected to Homepage)
-![qa](/images/quoteadded.jpg)
+![qa](/templates/images/quoteadded.jpg)
 
 ## Updating my quote
-![upq](/images/toupdatequote.jpg)
+![upq](/templates/images/toupdatequote.jpg)
 
 ## Update added
-![upa](/images/quoteupdated.jpg)
+![upa](/templates/images/quoteupdated.jpg)
 
 ## Delete my quote
-![dq](/images/Deletemyquote.jpg)
+![dq](/templates/images/Deletemyquote.jpg)
 
 ## Quote deleted
-![qd](/images/quotedeleted.jpg)
+![qd](/templates/images/quotedeleted.jpg)
 
 <a name="improve"></a>
 ## Improvements for the Future
